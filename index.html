@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    
+const usuarioCorreto = "admin";
+const senhaCorreta = "1234";
+
+let loginSucesso = false;
+
+// O loop roda ENQUANTO o loginSucesso for falso (ou seja, !loginSucesso)
+while (!loginSucesso) {
+    let usuarioDigitado = prompt("Digite o seu usuário:");
+    let senhaDigitada = prompt("Digite a sua senha:");
+
+    if (usuarioDigitado === usuarioCorreto && senhaDigitada === senhaCorreta) {
+        alert("Login efetuado com sucesso! Bem-vindo.");
+        loginSucesso = true; // Altera para true para QUEBRAR o loop while
+    } else {
+        alert("Usuário ou senha incorretos. Tente novamente!");
+        // Como loginSucesso continua false, o while vai rodar de novo
+    }
+}
+</script>
